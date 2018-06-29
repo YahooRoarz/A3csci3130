@@ -2,10 +2,8 @@ package com.acme.a3csci3130;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
-import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
-import android.support.test.espresso.action.ViewActions;
 
 import org.junit.Rule;
 import org.junit.Test;
