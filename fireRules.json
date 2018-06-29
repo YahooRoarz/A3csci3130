@@ -4,12 +4,27 @@
     ".write": "true",
     "contacts": {
             "$contact": {
-                "name": {
-                    ".validate": "newData.isString() && newData.val().length < 50"
-                },
+                "Name": {
+                    ".validate": "newData.isString() && newData.val().length < 48 && newData.val().length > 2"
+                },//length less than 48 and greater than 2
+
                 "email": {
                     ".validate": "newData.isString() && newData.val().matches(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}$/i)"
-                }
+                }//it is a email
+
+              /*"BusinessNumber": {
+                ".validate": "newData.isNumber()&& newData.val().matches(/^[0-9]{9}$/)"
+              },//9 digit number
+
+              "PrimaryBusiness": {
+                //".validate": "newData.isString() && newData.val().matches(/^fisher$/)"
+              }
+              /*"Address": {
+                ".validate": "newData.isString() && newData.val().matches(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}$/i)"
+              },
+              "Province": {
+                ".validate": "newData.isString() && newData.val().matches(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}$/i)"
+              }*/
             }
         }
   }

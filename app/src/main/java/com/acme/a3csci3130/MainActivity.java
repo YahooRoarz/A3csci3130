@@ -38,7 +38,7 @@ public class MainActivity extends Activity {
             @Override
             protected void populateView(View v, Contact model, int position) {
                 TextView contactName = (TextView)v.findViewById(android.R.id.text1);
-                contactName.setText(model.name);
+                contactName.setText(model.Name);
             }
         };
         contactListView.setAdapter(firebaseAdapter);
@@ -64,7 +64,5 @@ public class MainActivity extends Activity {
         intent.putExtra("Contact", person);
         startActivity(intent);
     }
-
-
 
 }
