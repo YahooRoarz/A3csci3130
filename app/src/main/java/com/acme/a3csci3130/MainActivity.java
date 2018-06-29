@@ -11,6 +11,9 @@ import android.widget.TextView;
 import com.firebase.ui.database.FirebaseListAdapter;
 import com.google.firebase.database.FirebaseDatabase;
 
+/**
+ * The type Main activity.
+ */
 public class MainActivity extends Activity {
 
 
@@ -52,6 +55,11 @@ public class MainActivity extends Activity {
         });
     }
 
+    /**
+     * Create contact button.
+     *
+     * @param v the v
+     */
     public void createContactButton(View v)
     {
         Intent intent=new Intent(this, CreateContactAcitivity.class);
@@ -64,5 +72,4 @@ public class MainActivity extends Activity {
         intent.putExtra("Contact", person);
         startActivity(intent);
     }
-
 }

@@ -8,10 +8,15 @@ import com.google.firebase.database.FirebaseDatabase;
 /**
  * Created by Franz on 2017-05-31.
  */
-
 public class MyApplicationData extends Application {
 
+    /**
+     * The Firebase reference.
+     */
     public DatabaseReference firebaseReference;
+    /**
+     * The Firebase db instance.
+     */
     public FirebaseDatabase firebaseDBInstance;
 
 }

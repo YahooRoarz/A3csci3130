@@ -8,9 +8,15 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/**
+ * The type Detail view activity.
+ */
 public class DetailViewActivity extends Activity {
 
     private EditText nameField, emailField;
+    /**
+     * The Received person info.
+     */
     Contact receivedPersonInfo;
 
     //like CreateContactActivity,just add new stuff :)
@@ -53,6 +59,11 @@ public class DetailViewActivity extends Activity {
         }
     }
 
+    /**
+     * Update contact.
+     *
+     * @param v the v
+     */
     public void updateContact(View v){
         //TODO: Update contact funcionality
         boolean check = true;
@@ -129,7 +140,13 @@ public class DetailViewActivity extends Activity {
             startActivity(intent);
         }
     }
-    //else, send error message on toast.
+
+    /**
+     * Erase contact.
+     *
+     * @param v the v
+     */
+//else, send error message on toast.
     public void eraseContact(View v)
     {
         //TODO: Erase contact functionality

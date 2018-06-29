@@ -10,7 +10,6 @@ import java.util.Map;
  * Class that defines how the data will be stored in the
  * Firebase databse. This is converted to a JSON format
  */
-
 public class Contact implements Serializable {
 
     public String uid;
@@ -26,6 +25,17 @@ public class Contact implements Serializable {
         // Default constructor required for calls to DataSnapshot.getValue
     }
 
+    /**
+     * Instantiates a new Contact.
+     *
+     * @param uid            the uid
+     * @param Name           the name
+     * @param email          the email
+     * @param BusinessNumber the business number
+     * @param PrimaryBusines the primary busines
+     * @param Address        the address
+     * @param Province       the province
+     */
     public Contact(String uid, String Name,String email,String BusinessNumber, String PrimaryBusines, String Address, String Province){
         this.uid = uid;
         this.email = email;
@@ -36,6 +46,11 @@ public class Contact implements Serializable {
         this.Province = Province;
     }
 
+    /**
+     * To map map.
+     *
+     * @return the map
+     */
     @Exclude
     public Map<String, Object> toMap(){
         HashMap<String, Object> result = new HashMap<>();

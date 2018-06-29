@@ -28,11 +28,19 @@ import static org.junit.Assert.*;
 @RunWith(AndroidJUnit4.class)
 public class CRUDtest {
 
+    /**
+     * The Create.
+     */
     @Rule
     public ActivityTestRule<MainActivity> Create =
             new ActivityTestRule(MainActivity.class);
 
 
+    /**
+     * Use app context.
+     *
+     * @throws Exception the exception
+     */
     @Test
     public void useAppContext() throws Exception {
         // Context of the app under test.
@@ -41,6 +49,9 @@ public class CRUDtest {
         assertEquals("com.acme.a3csci3130", appContext.getPackageName());
     }
 
+    /**
+     * Create contact and read contact.
+     */
     @Test
     public void CreateContactAndReadContact() {
         //create a contact first
@@ -67,6 +78,9 @@ public class CRUDtest {
         onView(withId(R.id.deleteButton)).perform(click());
     }
 
+    /**
+     * Delect contact.
+     */
     @Test
     public void DelectContact() {
         onView(withId(R.id.CreateButton)).perform(click());
@@ -93,6 +107,9 @@ public class CRUDtest {
         onData(org.hamcrest.Matchers.allOf()).inAdapterView(withId(R.id.listView)).atPosition(0).equals(null);
     }
 
+    /**
+     * Update contact.
+     */
     @Test
     public void UpdateContact() {
         onView(withId(R.id.CreateButton)).perform(click());

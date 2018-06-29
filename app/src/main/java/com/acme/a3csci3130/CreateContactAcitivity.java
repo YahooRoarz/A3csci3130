@@ -8,6 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/**
+ * The type Create contact acitivity.
+ */
 public class CreateContactAcitivity extends Activity {
 
     private Button submitButton;
@@ -37,6 +40,11 @@ public class CreateContactAcitivity extends Activity {
         ProvinceField = (EditText)findViewById(R.id.province);
     }
 
+    /**
+     * Submit info button.
+     *
+     * @param v the v
+     */
     public void submitInfoButton(View v) {
         //each entry needs a unique ID
         boolean check = true;
